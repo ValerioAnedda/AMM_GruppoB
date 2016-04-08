@@ -11,86 +11,137 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Valerio Anedda 44940">
         <meta name="keywords" content="Pagine Clienti Spendi e Spandi">  
+        <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         
-        <h1> Questi sono i nostri oggetti in vendita</h1>
+         <!-- HEADER -->
+            <div id="header-wrapper">
+                    <div id="header"> 
+                             <div class ="titolo-header"> Benvenuti in Spendi & Spandi </div>
+                            <div class="logo-header"></div>
+
+                    </div>
+            </div>
+        <!-- FINE HEADER -->
+      <!-- FINE HEADER --> 
         
-        <p> potete scegliere uno tra questi, ma per noi è meglio se li scegliete tutti!</p>
-        
-        
-        <table  width="75%" border="1" align="center" bgcolor="#F5F6CE"  align="center">
-            <!----- PRIMA RIGA COLONNA INTESTAZIONE --->
-            <tr >
-                <th> Nome Prodotto</th>            
-                <th> immagine</th>
-                <th> Quantità</th>
-                <th> prezzo</th>
-                <th> carrello</th>
-            </tr> 
-                <!--- 2 RIGA : ARIA FRESCA ---->
-            <tr align="center">
-                 <td><p> Aria fresca </p></td>
-                 <td> <img title="aria fresca" alt="aria fresca" 
-                           src="src/img clienti/ariaFresca.jpg" width="120" height="141"> </td>
-                 <td><p> 1000 pz </p></td>
-                 <td><p> 4 euro </p></td>
-                 <td> <a href="#"> <img title="carrello" alt="vai al carrello"  
-                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
-            </tr>
-           
-            <!--- 3 RIGA : SOGNI nel Cassetto ---->
-            <tr align="center">
-                <td> <p> Sogni <br> nel cassetto </p></td>
-                 <td> <img title="Sogni" alt="Sogni nel Cassetto" 
-                           src="src/img clienti/SogniNelCassetto.jpg" width="120" height="141"> </td>
-                 <td><p> 3 pz </p></td>
-                 <td><p> 40 euro </p></td>
-                 <td> <a href="#"> <img title="carrello" alt="vai al carrello"  
-                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
-            </tr>
+        <!--    CORPO DELLA PAGINA -->
+        <div class="container-page">
+               
+            <!--    Colonna Sinistra -->
+            <div id="column-left"> 
+                <h3> Accedi alle altre sezioni del sito </h3>
+
+                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
+                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
+                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
+
+            </div> 
+               <!--    Colonna Destra -->
+            <div id="column-right"> 
+                <h3> Accedi alle altre sezioni del sito </h3>
+
+                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
+                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
+                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
+
+            </div>
+            <!--    Colonna Centrale -->
+            <div id ="column-container">
+                    
+                <h1 > Questi sono i nostri oggetti in vendita</h1>
+
+                        <p> potete scegliere uno tra questi, ma per noi è meglio se li scegliete tutti!</p>
+
+
+                        <table class="tabella-cliente">
+                            <!----- PRIMA RIGA COLONNA INTESTAZIONE --->
+                            <tr class="table-title">
+                                <th> Nome Prodotto</th>            
+                                <th> immagine</th>
+                                <th> Quantità</th>
+                                <th> prezzo</th>
+                                <th> carrello</th>
+                            </tr> 
+                                <!--- 2 RIGA : ARIA FRESCA ---->
+                            <tr class="table-pari">
+                                 <td class="table"><p> Aria fresca </p></td>
+                                 <td class="table"> <img class="table" title="aria fresca" alt="aria fresca" 
+                                           src="src/img clienti/ariaFresca.jpg" width="120" height="141"> </td>
+                                 <td class="table"><p> 1000 pz </p></td>
+                                 <td class="table"><p> 4 euro </p></td>
+                                 <td class="table"> <a href="#"> <img title="carrello" alt="vai al carrello"  
+                                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
+                            </tr>
+
+                            <!--- 3 RIGA : SOGNI nel Cassetto ---->
+                            <tr class="table-dispari">
+                                <td class="table"> <p> Sogni <br> nel cassetto </p></td>
+                                 <td class="table"> <img class="table" title="Sogni" alt="Sogni nel Cassetto" 
+                                           src="src/img clienti/SogniNelCassetto.jpg" width="120" height="141"> </td>
+                                 <td class="table"><p> 3 pz </p></td>
+                                 <td class="table"><p> 40 euro </p></td>
+                                 <td class="table"> <a href="#"> <img title="carrello" alt="vai al carrello"  
+                                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
+                            </tr>
+
+                            <!--- 4 RIGA : Attico in centro ---->
+                            <tr class="table-pari">
+                                <td class="table"> <p> Attico <br> in centro </p></td>
+                                 <td class="table"> <img  class="table" title="attico" alt="attico in centro" 
+                                           src="src/img clienti/atticoInCentro.jpg" width="120" height="141"> </td>
+                                 <td class="table"><p> 1 pz </p></td>
+                                 <td class="table"><p> 4000000,05 euro </p></td>
+                                 <td class="table"> <a href="#"> <img title="carrello" alt="vai al carrello" 
+                                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
+                            </tr>
+
+                            <!--- 5 RIGA : Tre Euro ---->
+                            <tr class="table-dispari">
+                                <td class="table"> <p> Tre <br> Euri  </p></td>
+                                 <td class="table"> <img class="table"  title="treEuro" alt="Tre euri" 
+                                           src="src/img clienti/tre_euro.jpg" width="120" height="141"> </td>
+                                 <td class="table"><p> 4 pz </p></td>
+                                 <td class="table"><p> 2.99 euro </p></td>
+                                 <td class="table"> <a href="#"> <img title="carrello" alt="vai al carrello" 
+                                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
+                            </tr>
+
+                             <!--- 6 RIGA : Abbraccio ---->
+                            <tr class="table-pari">
+                                <td class="table"> <p> Un <br> Abbraccio  </p></td>
+                                 <td class="table"> <img  class="table" title="Un Abbraccio" alt="Un abbraccio forte forte" 
+                                           src="src/img clienti/unAbbraccio.png" width="120" height="141"> </td>
+                                 <td class="table" ><p > 1000000000 pz </p></td>
+                                 <td class="table"><p> 1 euro </p></td>
+                                 <td class="table"> <a href="#"> <img title="carrello" alt="vai al carrello" 
+                                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
+                            </tr>
+                        </table>
+
+
+
+                        <h2 align="center"> Prima di effettuare gli acquisti ricordatevi di fare il <a href="./login.html">LOGIN!!</a></h6>
+
+                        <h4 align="center"> per maggiori informazioni visitate la pagina di <a href="./descrizione.html"> Descrizione</a>. </h4>
+
             
-            <!--- 4 RIGA : Attico in centro ---->
-            <tr align="center">
-                <td> <p> Attico <br> in centro </p></td>
-                 <td> <img title="attico" alt="attico in centro" 
-                           src="src/img clienti/atticoInCentro.jpg" width="120" height="141"> </td>
-                 <td><p> 1 pz </p></td>
-                 <td><p> 4000000,05 euro </p></td>
-                 <td> <a href="#"> <img title="carrello" alt="vai al carrello" 
-                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
-            </tr>
-            
-            <!--- 5 RIGA : Tre Euro ---->
-            <tr align="center">
-                <td> <p> Tre <br> Euri  </p></td>
-                 <td> <img title="treEuro" alt="Tre euri" 
-                           src="src/img clienti/tre_euro.jpg" width="120" height="141"> </td>
-                 <td><p> 4 pz </p></td>
-                 <td><p> 2.99 euro </p></td>
-                 <td> <a href="#"> <img title="carrello" alt="vai al carrello" 
-                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
-            </tr>
-            
-             <!--- 6 RIGA : Abbraccio ---->
-            <tr align="center">
-                <td> <p> Un <br> Abbraccio  </p></td>
-                 <td> <img title="Un Abbraccio" alt="Un abbraccio forte forte" 
-                           src="src/img clienti/unAbbraccio.png" width="120" height="141"> </td>
-                 <td ><p > 1000000000 pz </p></td>
-                 <td><p> 1 euro </p></td>
-                 <td> <a href="#"> <img title="carrello" alt="vai al carrello" 
-                                        src="src/img clienti/carrello.gif" width="20" height="41"> </a></td>
-            </tr>
-        </table>
+
+
+        </div>
+        <!--FINE CORPO DELLA PAGINA -->
         
         
-     
-        <h2 align="center"> Prima di effettuare gli acquisti ricordatevi di fare il <a href="./login.html">LOGIN!!</a></h6>
-        
-        <h4 align="center"> per maggiori informazioni visitate la pagina di <a href="./descrizione.html"> Descrizione</a>. </h4>
-        
-        
+         <!-- FOOTER -->
+            <div id="footer">
+
+                    <p>Spendi & Spandi </p>
+                    <p>Contact information: <a href=".descrizione.html">
+                    info@spendispandi.com</a>.</p>
+
+            </div>
+        <!-- FINE FOOTER-->
         
     </body>
 </html>

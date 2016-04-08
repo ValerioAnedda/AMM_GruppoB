@@ -1,0 +1,257 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2-apr-2016, 13.35.40
+    Author     : valerio
+*/
+
+/***** GENERAL SITE ******/
+body
+{
+    font-size: 16px;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: blue;
+    background-color: bisque;
+    min-height: 680px;
+    
+}
+#body-container{
+        height: 100%;
+}
+h1{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+h2
+{
+	color: aqua;
+        text-align: center;
+}
+h3
+{
+	color:brown ;
+        text-align: center;
+}
+h4,h5,h6
+{
+	color: black;
+        
+}
+a:link , a:visited
+{
+	color:black;
+        text-decoration:none;
+}
+a:link
+{
+	text-decoration:underline;
+}
+
+
+/************* HEADER *******************/
+#header-wrapper{
+    background-color: black ;
+    height: 119px;
+    border-right-width: 8px; border-right-color: black; border-right-style:  solid; 
+    padding-bottom: 2px;
+}
+#header{
+    background-color: springgreen;
+    height: 117px;
+    bottom: initial; 
+    }
+
+.logo-header{
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    height: 117px;
+    width: 50%;
+    position:absolute;    
+}
+.titolo-header{
+    color: white;
+    font-family: "Verdana";
+    font-size: 25px;
+    float: right !important;
+    padding-right: 20px;
+}
+
+/******* CONTAINER PAGE***********/
+.container-page{
+    background-color: beige;
+    min-height: 690px;    
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/************ FOOOTER ************/
+#footer{
+    border: 2px solid #2c416a;
+    color: #2c416a;
+    font-family: Verdana,Geneva,sans-serif;
+    vertical-align: top;
+    width : 100%;
+    height : 90px;
+    text-align : center;
+    bottom:0;
+    
+}
+
+
+
+
+/***** AREA LOGIN  ****/ 
+#areaLogin{
+    padding-top: 10px;
+    color: #336699;
+    font-family: "Verdana";
+    font-size: 16px;
+    font-weight: bold;
+    height: 21px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+areaLogin.tr{height: 30px; color: #1E395B; background-color: #DDE7F4; margin-top: 15px; }
+table.areaLogin-table {width: 350px; height: 150px; border: 3px solid #336699; padding: 0; }
+areaLogin.td {height: 21px; padding: 5px; }
+input.areaLogin-input {  max-width: 100%; }
+
+/****** CLiente *****/
+.tabella-cliente{
+    width: 100%;
+    border : 1px solid black;
+    background-color: #F5F6CE;    
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+tr.table-title{
+    height:  60px;
+}
+tr.table-pari{
+    background-color: beige; 
+    width: auto;
+    height: auto;
+}
+
+tr.table-dispari{
+    background-color: bisque;
+    width: auto;
+    height: auto;
+}
+
+td.table{
+    width: auto;
+    height: auto;
+}
+
+img.table{
+    max-height: 75px;
+    max-width: 75px;
+}
+
+
+/***** AREA VENDITORE     ****/ 
+#areaVenditore{
+    padding-top: 10px;
+    color: #336699;
+    font-family: "Verdana";
+    font-size: 16px;
+    font-weight: bold;
+    height: 21px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.tabellaVenditore{
+    height: auto;
+}
+areaVenditore.tr{height: 30px; color: #1E395B; background-color: #DDE7F4; margin-top: 15px; }
+areaVenditore.table {width: 469px; height: 150px;}
+areaVenditore.td {height: 21px; padding: 5px; }
+input.areaVenditore-input {  max-width: 100%; }
+
+/** 3 colonne ***/
+@media only screen and (min-width: 1280px)
+{
+    #column-left{
+        float: left;
+        padding-left: 5px;
+        width:18%;
+    }
+   
+    #column-container{
+         margin-left: 20%;
+        margin-right: 20%;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+   
+    #column-right{
+        float: right;
+        padding-right: 10px;
+        width: 18%;
+    }
+}
+
+
+/** 2 colonne ***/
+
+@media only screen and (min-width: 480px) and (max-width: 1280px)
+{
+
+    #column-left{
+       float: left;
+       padding-left: 5px;
+       width: 20%;
+    }
+   
+    #column-container{
+        margin-left: 200px;
+        margin-right: 5px;
+        padding-bottom: 10px;
+    }
+    
+    #column-right{
+        clear: both;
+        float: left;
+        padding-left: 5px;
+        padding-right: 10px;
+        width: 200px;
+    }
+}
+
+/** 1 colonne ***/
+@media only screen and (max-width: 480p)
+{
+
+     #column-left{
+       float: left;
+       padding-left: 5px;
+       width: 20%;
+    }
+   
+    #column-container{
+        
+        margin-left: 200px;
+        margin-right: 5px;
+        padding-bottom: 10px;
+    }
+    
+    #column-right{
+        clear: both;
+        float: left;
+        padding-left: 5px;
+        padding-right: 10px;
+        width: 200px;
+    }
+}

@@ -11,26 +11,87 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Valerio Anedda 44940">
         <meta name="keywords" content="Login Spendi e Spandi">  
+        <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-        <div class="input-form">
-            <h2> Login </h2>
-            <label for="username">UserName</label>
-            <input maxlength="8" size="18" name="username"id="username"type="text"/>
-            <label for="password">Password</label>
-            <input type="password" maxlength="8" size="18" name="password"id="password"type="text"/>
-            <input name="login" type="submit" formmethod="post" value ="Login"/> <br>   
-           
+    <body> 
+            <!-- HEADER -->
+            <div id="header-wrapper">
+                    <div id="header"> 
+                             <div class ="titolo-header"> Benvenuti in Spendi & Spandi </div>
+                            <div class="logo-header"></div>
+
+                    </div>
+            </div>
+        <!-- FINE HEADER --> 
+        
+        <!--    CORPO DELLA PAGINA -->
+        <div class="container-page">
+               
+            <!--    Colonna Sinistra -->
+            <div id="column-left"> 
+                <h3> Accedi alle altre sezioni del sito </h3>
+
+                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
+                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
+                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
+
+            </div> 
             
-            <h3> Accedi alle altre sezioni del sito </h3>
+            <!--    Colonna Destra -->
+            <div id="column-right"> 
+                <h3> Accedi alle altre sezioni del sito </h3>
+
+                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
+                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
+                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
+
+            </div>
+               
+            <!--    Colonna Centrale -->
+            <div id="column-container"> 
+                   <div id="areaLogin"> 
+                            <table class="areaLogin-table">
+                                 <td>Area login </td>
+                                 <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="username">UserName</label>
+                                            </td>
+                                                <td colspan="2">
+                                                    <input class="areaLogin-input" name="username"id="username"type="text"/>
+                                                 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="password">Password</label>
+                                         </td>
+                                        <td>
+                                        <input  class="areaLogin-input"  type="password" name="password"id="password"type="text"/>                                           
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input name="login" type="submit" formmethod="post" value ="Login"/> <br>   
+                                        </td>
+                                    </tr>   
+                                 </tbody>
+                            </table>
+                   </div>
+            </div>  
             
-            <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
-            <h5> <a href="./venditore.html" >  Venditore </a> </h5>
-            <h5> <a href="./cliente.html" >  Cliente </a> </h5>
-            
+
+
         </div>
+        <!--FINE CORPO DELLA PAGINA -->
         
-        
-        
-    </body>
+        <!-- FOOTER -->
+            <div id="footer">
+
+                    <p>Spendi & Spandi </p>
+                    <p>Contact information: <a href=".descrizione.html">
+                    info@spendispandi.com</a>.</p>
+
+            </div>
+        <!-- FINE FOOTER-->
+</body>
 </html>
