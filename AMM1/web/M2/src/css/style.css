@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : 2-apr-2016, 13.35.40
-    Author     : valerio
+    Author     : Valerio Anedda 44940
 */
 
 /***** GENERAL SITE ******/
@@ -14,7 +14,7 @@ body
     font-size: 16px;
     font-family: "Open Sans", Arial, sans-serif;
     color: blue;
-    background-color: bisque;
+    background-image: url('https://www.msistone.com/image.axd?picture=SC@Perla-White-Quartz.jpg') ;
     min-height: 680px;
     
 }
@@ -28,7 +28,7 @@ h1{
 }
 h2
 {
-	color: aqua;
+	color: darkslateblue;
         text-align: center;
 }
 h3
@@ -54,16 +54,15 @@ a:link
 
 /************* HEADER *******************/
 #header-wrapper{
-    background-color: black ;
     height: 119px;
-    border-right-width: 8px; border-right-color: black; border-right-style:  solid; 
     padding-bottom: 2px;
 }
 #header{
-    background-color: springgreen;
+    background-color: rgba(191, 187, 180, 0.94);
     height: 117px;
     bottom: initial; 
-    }
+    border:  3px solid #000 ;    
+}
 
 .logo-header{
     background-image: url(../img/logo.png);
@@ -71,23 +70,52 @@ a:link
     height: 117px;
     width: 50%;
     position:absolute;    
+    margin-left: 10%;
 }
 .titolo-header{
-    color: white;
-    font-family: "Verdana";
-    font-size: 25px;
+   color: midnightblue;
     float: right !important;
-    padding-right: 20px;
+    font-family: status-bar;
+    font-size: 31px;
+    margin-top: 64px;
+    padding-right: 120px;
 }
 
+/******* TOP MENU ***********/        
+ 
+#top-menu-container{
+    background-color: rgba( 100 , 100 ,100 , .60);
+        height: 25px;
+        margin-top : -25px;
+}
+.top-menu{
+}
+.tab-top-menu{
+      margin-left: 12%;
+}
+
+.tab-top-menu a {
+     border-left: 2px solid #fff;
+    color: #fff;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 19px;
+    font-style: oblique;
+    padding-left: 10px;
+    padding-right: 8px;
+    position: relative;
+}
+
+
 /******* CONTAINER PAGE***********/
+
 .container-page{
-    background-color: beige;
+    background-color: rgba(228, 231, 123, 0.2);
     min-height: 690px;    
     max-width: 1200px; 
     margin-left: auto;
     margin-right: auto;
-    
+     border:  3px solid rgba( 0 , 0, 0 , 0.3);
+    margin-top: 3px; 
 }
 
 /************ FOOOTER ************/
@@ -119,10 +147,27 @@ a:link
 }
 
 
-areaLogin.tr{height: 30px; color: #1E395B; background-color: #DDE7F4; margin-top: 15px; }
-table.areaLogin-table {width: 350px; height: 150px; border: 3px solid #336699; padding: 0; }
-areaLogin.td {height: 21px; padding: 5px; }
-input.areaLogin-input {  max-width: 100%; }
+areaLogin.tr{
+    height: 30px; 
+    color: #1E395B; 
+    background-color: #DDE7F4; 
+    margin-top: 15px; 
+}
+table.areaLogin-table { 
+    background-color: rgba(211, 211, 200, 0.5); 
+    width: 350px; height: 150px; 
+    border: 3px solid #336699; 
+    padding: 0; 
+}
+
+areaLogin.td {
+    height: 21px; 
+    padding: 5px; 
+}
+
+input.areaLogin-input {  
+    max-width: 100%;
+}
 
 /****** CLiente *****/
 .tabella-cliente{
@@ -151,13 +196,22 @@ tr.table-dispari{
 td.table{
     width: auto;
     height: auto;
+         border:  1px solid #000 ;    
+
 }
 
-img.table{
+.table img {
     max-height: 75px;
     max-width: 75px;
 }
+.table img[title="carrello"] {
+    max-height: 45px;
+    max-width: 45px;
+}
 
+.tabella-cliente p{
+    text-align:  center;
+}
 
 /***** AREA VENDITORE     ****/ 
 #areaVenditore{
@@ -174,10 +228,23 @@ img.table{
 .tabellaVenditore{
     height: auto;
 }
-areaVenditore.tr{height: 30px; color: #1E395B; background-color: #DDE7F4; margin-top: 15px; }
-areaVenditore.table {width: 469px; height: 150px;}
-areaVenditore.td {height: 21px; padding: 5px; }
-input.areaVenditore-input {  max-width: 100%; }
+areaVenditore.tr{
+    height: 30px; 
+    color: #1E395B; 
+    background-color: #DDE7F4; 
+    margin-top: 15px; 
+}
+areaVenditore.table {
+    width: 469px; 
+    height: 150px;
+}
+areaVenditore.td {
+    height: 21px; 
+    padding: 5px; 
+}
+input.areaVenditore-input {  
+    max-width: 100%; 
+}
 
 /** 3 colonne ***/
 @media only screen and (min-width: 1280px)
@@ -187,7 +254,16 @@ input.areaVenditore-input {  max-width: 100%; }
         padding-left: 5px;
         width:18%;
     }
-   
+    
+    #column-left a{
+        color: #000000;
+        font-family: "Verdana";
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 18px;
+        padding-top: 10px;
+    }
+    
     #column-container{
          margin-left: 20%;
         margin-right: 20%;
@@ -200,6 +276,14 @@ input.areaVenditore-input {  max-width: 100%; }
         float: right;
         padding-right: 10px;
         width: 18%;
+    }
+    #column-right a{
+        color: #000000;
+        font-family: "Verdana";
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 18px;
+        padding-top: 10px;
     }
 }
 
