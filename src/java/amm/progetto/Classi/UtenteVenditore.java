@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  *
  * @author valerio
- */
+ */ 
 public class UtenteVenditore {
     
     /** Attributi Utente Venditore ***/
