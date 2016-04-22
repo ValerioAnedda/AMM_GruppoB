@@ -7,7 +7,7 @@ package amm.progetto.Classi;
 
 /**
  *
- * @author Alessandro
+ * @author Valerio
  */
 public abstract class Utente {
     /* Attributi */

@@ -16,6 +16,8 @@ public class OggettoVendita {
     private String urlImmagine;
     private Integer quantita;
     private Integer prezzo;
+    private UtenteVenditore venditore; 
+    private String categoria;
 
     /** Costruttore OggettoVendita ***/
     
@@ -25,8 +27,9 @@ public class OggettoVendita {
             urlImmagine ="";
             quantita = 0;
             prezzo = 0;
+            venditore = new UtenteVenditore();
+            categoria = "";
     }
-    
     
     /**
      * @return the nome
@@ -93,8 +96,45 @@ public class OggettoVendita {
      public Integer getPrezzo(){
          return this.prezzo;
      }
-
+    /**
+     * @param prezzo the prezzo to set
+     * 
+     */
      public void setPrezzo(Integer prezzo){
          this.prezzo=prezzo;
      }
+     
+     /**
+     * @return the venditore
+     */
+     public UtenteVenditore getVenditore(){
+         return this.venditore;
+     }
+     
+     /**
+     * @param venditore the venditore to set
+     * 
+     */
+     public void setVenditore( UtenteVenditore venditore ){
+         this.venditore = venditore;
+     }
+     
+    /**
+     * @return the categoria
+     */
+     public String getCategoria(){
+         return this.categoria;
+     }
+     
+     /**
+     * @param categoria the categoria to set
+     * 
+     */
+     public void setCategoria( String categoria ){
+         this.categoria = categoria;
+     } 
+     
+     
+     
+     
 }
