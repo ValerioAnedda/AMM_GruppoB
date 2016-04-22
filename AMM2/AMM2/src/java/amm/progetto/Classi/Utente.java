@@ -11,7 +11,7 @@ package amm.progetto.Classi;
  */
 public abstract class Utente {
     /* Attributi */
-    protected int id;
+    protected Integer id;
     protected String nome;
     protected String cognome;
     

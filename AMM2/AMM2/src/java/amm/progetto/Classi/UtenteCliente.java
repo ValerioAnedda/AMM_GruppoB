@@ -5,10 +5,13 @@
  */
 package amm.progetto.Classi;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author valerio
  */
-public class UtenteCliente {
-    
+public class UtenteCliente extends Utente {
+        Integer saldo ;
+        ArrayList<OggettoVendita> carrello = new ArrayList<OggettoVendita>();
 }

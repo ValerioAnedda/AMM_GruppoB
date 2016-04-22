@@ -11,15 +11,13 @@ import java.util.ArrayList;
  *
  * @author valerio
  */ 
-public class UtenteVenditore {
+public class UtenteVenditore extends Utente {
     
     /** Attributi Utente Venditore ***/
-    private ArrayList<OggettoVendita> oggetti = new ArrayList<OggettoVendita>();
+    Integer saldo ;
     
     
-    public OggettoVendita getOggetto(int n){
-        return oggetti.get(n);
-    }
+    
     
     
     

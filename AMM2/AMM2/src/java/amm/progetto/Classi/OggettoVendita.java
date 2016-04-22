@@ -22,13 +22,7 @@ public class OggettoVendita {
     /** Costruttore OggettoVendita ***/
     
     public OggettoVendita(){
-            id = 0;
-            nome = "";
-            urlImmagine ="";
-            quantita = 0;
-            prezzo = 0;
-            venditore = new UtenteVenditore();
-            categoria = "";
+            
     }
     
     /**
