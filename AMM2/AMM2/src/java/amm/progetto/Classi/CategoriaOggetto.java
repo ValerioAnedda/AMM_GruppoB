@@ -6,16 +6,84 @@
 package amm.progetto.Classi;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 /**
  *
  * @author Valerio
  */
-public class OggettiInVendita {
+public class CategoriaOggetto {
     /** Attributi **/ 
+    String nomeCategoria ;
+    String descrizioneCategoria;
+    CategoriaOggetto categoria; 
+    
     ArrayList<OggettoVendita> oggetti = new ArrayList<OggettoVendita>();
     
+    public CategoriaOggetto(){
+        nomeCategoria= "nome Nuova Categoria";
+        descrizioneCategoria = "Descrizione Nuova Categoria";
+        categoria = null; 
+    }
+    
+    public CategoriaOggetto( String nomeCategoria , String descrizioneCategoria , CategoriaOggetto categoria){
+        this.nomeCategoria=nomeCategoria;
+        this.descrizioneCategoria = descrizioneCategoria;
+        this.categoria = categoria;
+    }
+    
+    public CategoriaOggetto( String nomeCategoria , String descrizioneCategoria ){
+        this.nomeCategoria=nomeCategoria;
+        this.descrizioneCategoria = descrizioneCategoria;
+        this.categoria = null;
+    }
+    
+    /** set Attribute ***/
+    
+    /** 
+     * @return il nome della categoria
+     */
+    public String getName(){
+        return this.nomeCategoria;
+    }
+    
+    /** 
+     * @return  descrizione della categoria
+     */
+    public String getDescrizione(){
+        return this.descrizioneCategoria;
+    }
+    
+    /** 
+     * @return Categoria della categoria
+     */
+    public CategoriaOggetto getCategoria(){
+        return this.categoria;
+    }
+    
+    /**
+     * @param nomeCategoria setta il nome della categoria
+     */
+    public void setName(String nomeCategoria){
+        this.nomeCategoria = nomeCategoria;
+    }
+    
+    /**
+     * @param descrizioneCategoria  settala descrizione della categoria
+     */
+    public void setDescrizione(String descrizioneCategoria){
+        this.descrizioneCategoria = descrizioneCategoria;
+    }
+    
+    /**
+     * @param categoria   setta la categoria
+     */
+    public void setCategoria(CategoriaOggetto categoria){
+        this.categoria = categoria;
+    }
+    
+    
+    
+    /*** METODI e Funzionalità **/
     /**
      * @return the listaOggeti
      */

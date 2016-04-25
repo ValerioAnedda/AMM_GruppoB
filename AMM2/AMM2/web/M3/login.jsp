@@ -1,9 +1,11 @@
+<%-- 
+    Document   : login
+    Created on : 25-apr-2016, 15.31.46
+    Author     : valerio
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Loign Spendi e Spandi</title>
@@ -15,51 +17,17 @@ and open the template in the editor.
     </head>
     <body> 
             <!-- HEADER -->
-            <div id="header-wrapper">
-                    <div id="header"> 
-                             <div class ="titolo-header"> Benvenuti in Spendi & Spandi </div>
-                            <div class="logo-header"></div>
-
-                    </div>
-            </div>
-             <!-- TOP MENU -->
-            <div id="top-menu-container">
-                <div class="top-menu">
-                    <div class="tab-top-menu"> 
-                        <a href="./login.html" >Home </a>
-                        <a href="./descrizione.html" >  Descrizione </a>
-                        <a href="./venditore.html" >  Venditore </a> 
-                        <a href="./cliente.html" >  Cliente </a> 
-                    </div>
-                </div>
-            </div>           
-                        
-             
-             <!-- TOP MENU -->
+         <%@include file="include/header.jsp" %> 
         <!-- FINE HEADER --> 
         
         <!--    CORPO DELLA PAGINA -->
         <div class="container-page">
                
             <!--    Colonna Sinistra -->
-            <div id="column-left"> 
-                <h3> Accedi alle altre sezioni del sito </h3>
-
-                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
-                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
-                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
-
-            </div> 
-            
+            <%@include file="include/leftColumn.jsp" %>
+              
             <!--    Colonna Destra -->
-            <div id="column-right"> 
-                <h3> Accedi alle altre sezioni del sito </h3>
-
-                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
-                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
-                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
-
-            </div>
+            <%@include file="include/rightColumn.jsp" %>
                
             <!--    Colonna Centrale -->
             <div id="column-container"> 
@@ -99,13 +67,7 @@ and open the template in the editor.
         <!--FINE CORPO DELLA PAGINA -->
         
         <!-- FOOTER -->
-            <div id="footer">
-
-                    <p>Spendi & Spandi </p>
-                    <p>Contact information: <a href=".descrizione.html">
-                    info@spendispandi.com</a>.</p>
-
-            </div>
+         <%@include file="include/footer.jsp" %> 
         <!-- FINE FOOTER-->
 </body>
 </html>

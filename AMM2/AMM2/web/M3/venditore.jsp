@@ -1,9 +1,11 @@
+<%-- 
+    Document   : venditore
+    Created on : 25-apr-2016, 15.32.02
+    Author     : valerio
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Pagina Vendor</title>
@@ -16,49 +18,17 @@ and open the template in the editor.
     <body>
         
           <!-- HEADER -->
-            <div id="header-wrapper">
-                    <div id="header"> 
-                             <div class ="titolo-header"> Benvenuti in Spendi & Spandi </div>
-                            <div class="logo-header"></div>
-
-                    </div>
-            </div>
-           <!-- TOP MENU -->
-            <div id="top-menu-container">
-                <div class="top-menu">
-                    <div class="tab-top-menu"> 
-                        <a href="./login.html" >Home </a>
-                        <a href="./descrizione.html" >  Descrizione </a>
-                        <a href="./venditore.html" >  Venditore </a> 
-                        <a href="./cliente.html" >  Cliente </a> 
-                    </div>
-                </div>
-            </div>           
-                        
-             
-             <!-- TOP MENU -->
-        <!-- FINE HEADER -->
+         <%@include file="include/header.jsp" %> 
+        <!-- FINE HEADER --> 
         
         <!--    CORPO DELLA PAGINA -->
         <div class="container-page">
                
-            <!--    Colonna Sinistra -->
-            <div id="column-left"> 
-                <h3> Accedi alle altre sezioni del sito </h3>
-
-                     <h5> <a href="./descrizione.html" >  Descrizione </a> </h5>
-                     <h5> <a href="./venditore.html" >  Venditore </a> </h5>
-                     <h5> <a href="./cliente.html" >  Cliente </a> </h5>
-
-            </div> 
-            
+           <!--    Colonna Sinistra -->
+            <%@include file="include/leftColumn.jsp" %>
+              
             <!--    Colonna Destra -->
-            <div id="column-right"> 
-                 <h2 align="center"> Ricordatevi di fare il <a href="./login.html">LOGIN!!</a></h6>
-
-                    <h4 align="center"> per maggiori informazioni visitate la pagina di <a href="./descrizione.html"> Descrizione</a>. </h4>
-
-            </div>
+            <%@include file="include/rightColumn.jsp" %>
                
             <!--    Colonna Centrale -->
             <div id="column-container"> 
@@ -68,7 +38,7 @@ and open the template in the editor.
                         hai un vecchio tavolo? Hai un veccio tappeto, hai una lamapda a olio che non ti <br>
                         serve più? qui puoi metterla in vendita e ricavare i soldi per poter comprare altre<br>
                         cose inutili nel nostro bellissimo eCommerce.</p>
-                        <h7> Per spendere tanti solti visita <a href="./cliente.html"> Area Clienti</a>. </h4> </h7>
+                        <h7> Per spendere tanti solti visita <a href="./cliente.jsp"> Area Clienti</a>. </h4> </h7>
                         <table class="tabellaVenditore">      
                             <td> <h4> compila i campi e diventa ricco!!</h4> </td>
                             <tbody>
@@ -106,14 +76,9 @@ and open the template in the editor.
         </div>
         <!--FINE CORPO DELLA PAGINA -->
          
-       <!-- FOOTER -->
-            <div id="footer">
-
-                    <p>Spendi & Spandi </p>
-                    <p>Contact information: <a href=".descrizione.html">
-                    info@spendispandi.com</a>.</p>
-
-            </div>
+       
+        <!-- FOOTER -->
+         <%@include file="include/footer.jsp" %> 
         <!-- FINE FOOTER-->  
         
         </body>

@@ -14,9 +14,9 @@ public abstract class Utente {
     protected Integer id;
     protected String nome;
     protected String cognome;
-    
     protected String username;
     protected String password;
+    protected ContoUtente saldo;
     
     
     /* Costruttore */
@@ -98,4 +98,12 @@ public abstract class Utente {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    /**
+     * @return the saldo
+     */
+    public ContoUtente getSaldo() {
+        return saldo;
+    }
+    
 }
