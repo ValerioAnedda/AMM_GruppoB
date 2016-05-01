@@ -15,10 +15,7 @@ public class UtenteVenditore extends Utente {
     
     /** Attributi Utente Venditore ***/
     Integer saldo ;
-    
-    
-    
-    
+    ArrayList<OggettoVendita> oggettiInvendita = new ArrayList<OggettoVendita>();
     
     
 }

@@ -12,6 +12,9 @@ import java.util.ArrayList;
  * @author valerio
  */
 public class UtenteCliente extends Utente {
-        Integer saldo ;
+        ContoUtente saldo ;
         ArrayList<OggettoVendita> carrello = new ArrayList<OggettoVendita>();
+        
+        
+       
 }

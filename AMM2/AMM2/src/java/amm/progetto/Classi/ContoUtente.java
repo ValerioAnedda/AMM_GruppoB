@@ -12,27 +12,27 @@ package amm.progetto.Classi;
 public class ContoUtente {
         /** Attributi ***/
         
-        Integer saldo ;
+        Double saldo ;
         
         public ContoUtente(){
-            saldo = 0;
+            saldo = 0.0;
         }
         
-        public ContoUtente(Integer saldo){
+        public ContoUtente(Double saldo){
             this.saldo = saldo;
         }
         
      /**
      * @param incremento incrementa il conto dell'utente.
      */
-    public void incrementConto(Integer incremento) {
+    public void incrementConto(Double incremento) {
         this.saldo = this.saldo + incremento; 
     }
     
     /**
      * @param decremento decrementa il conto dell'utente.
      */
-    public void decrementConto(Integer decremento) {
+    public void decrementConto(Double decremento) {
         this.saldo = this.saldo - decremento; 
     }
 }

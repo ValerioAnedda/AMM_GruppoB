@@ -15,7 +15,7 @@ public class OggettoVendita {
     private String nome;
     private String urlImmagine;
     private Integer quantita;
-    private Integer prezzo;
+    private Double prezzo;
     private UtenteVenditore venditore; 
     private String categoria;
 
@@ -87,16 +87,21 @@ public class OggettoVendita {
     /**
      * @return the prezzo
      */
-     public Integer getPrezzo(){
+     public Double getPrezzo(){
          return this.prezzo;
      }
     /**
      * @param prezzo the prezzo to set
      * 
      */
-     public void setPrezzo(Integer prezzo){
+     public void setPrezzo(Double prezzo){
          this.prezzo=prezzo;
      }
+     
+      public void setPrezzo(Integer prezzo){
+         this.prezzo= prezzo +0.0;
+     }
+     
      
      /**
      * @return the venditore

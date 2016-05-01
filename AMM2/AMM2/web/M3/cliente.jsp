@@ -18,17 +18,17 @@
     <body>
         
         <!-- HEADER -->
-         <%@include file="include/header.jsp" %> 
+          <jsp:include page="include/header.jsp" /> 
         <!-- FINE HEADER --> 
         
         <!--    CORPO DELLA PAGINA -->
         <div class="container-page">
                
             <!--    Colonna Sinistra -->
-            <%@include file="include/leftColumn.jsp" %>
+             <jsp:include page="include/leftColumn.jsp" />
               
             <!--    Colonna Destra -->
-            <%@include file="include/rightColumn.jsp" %>
+             <jsp:include page="include/rightColumn.jsp" />
             
             
             <!--    Colonna Centrale -->
@@ -36,7 +36,7 @@
                 <h1 > Questi sono i nostri oggetti in vendita</h1>
                 <p> potete scegliere uno tra questi, ma per noi è meglio se li scegliete tutti!</p>
                 <!-- Tabella cliente  -->
-                <%@include file="cliente/tabellaCliente.jsp" %>
+                 <jsp:include page="cliente/tabellaCliente.jsp" />
                 <h2 align="center"> Prima di effettuare gli acquisti ricordatevi di fare il <a href="./login.jsp">LOGIN!!</a></h6>
                 <h4 align="center"> per maggiori informazioni visitate la pagina di <a href="./descrizione.jsp"> Descrizione</a>. </h4>
             </div>        
@@ -47,7 +47,7 @@
         
         
          <!-- FOOTER -->
-         <%@include file="include/footer.jsp" %> 
+          <jsp:include page="include/footer.jsp" /> 
         <!-- FINE FOOTER-->
         
     </body>

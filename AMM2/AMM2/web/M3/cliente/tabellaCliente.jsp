@@ -4,6 +4,7 @@
     Author     : valerio
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
     <table class="tabella-cliente">
         <!----- PRIMA RIGA COLONNA INTESTAZIONE --->
@@ -70,4 +71,6 @@
                                     src="src/img clienti/carrello.gif" > </a></td>
         </tr>
     </table>
+    
+
     

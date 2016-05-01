@@ -18,7 +18,7 @@
     <body>
         
           <!-- HEADER -->
-         <%@include file="include/header.jsp" %> 
+          <jsp:include page="include/header.jsp" /> 
         <!-- FINE HEADER --> 
         
                    
@@ -26,10 +26,10 @@
         <div class="container-page">
                
             <!--    Colonna Sinistra -->
-            <%@include file="include/leftColumn.jsp" %>
+             <jsp:include page="include/leftColumn.jsp" />
               
             <!--    Colonna Destra -->
-            <%@include file="include/rightColumn.jsp" %>
+             <jsp:include page="include/rightColumn.jsp" />
                
                
                
@@ -84,7 +84,7 @@
         <!--FINE CORPO DELLA PAGINA -->      
         
         <!-- FOOTER -->
-         <%@include file="include/footer.jsp" %> 
+          <jsp:include page="include/footer.jsp" /> 
         <!-- FINE FOOTER-->
       </body>
 </html>

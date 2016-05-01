@@ -17,47 +17,50 @@
     </head>
     <body> 
             <!-- HEADER -->
-         <%@include file="include/header.jsp" %> 
+          <jsp:include page="include/header.jsp" /> 
         <!-- FINE HEADER --> 
         
         <!--    CORPO DELLA PAGINA -->
         <div class="container-page">
                
             <!--    Colonna Sinistra -->
-            <%@include file="include/leftColumn.jsp" %>
+             <jsp:include page="include/leftColumn.jsp" />
               
             <!--    Colonna Destra -->
-            <%@include file="include/rightColumn.jsp" %>
+             <jsp:include page="include/rightColumn.jsp" />
                
             <!--    Colonna Centrale -->
             <div id="column-container"> 
                    <div id="areaLogin"> 
                             <table class="areaLogin-table">
                                  <td>Area login </td>
+                                  <form method="post" action="Login">
+                                  <input type="hidden" name="cmd" value="login">
                                  <tbody>
                                     <tr>
                                         <td>
                                             <label for="username">UserName</label>
-                                            </td>
-                                                <td colspan="2">
-                                                    <input class="areaLogin-input" name="username"id="username"type="text"/>
-                                                 </td>
+                                        </td>
+                                        <td colspan="2">
+                                            <input class="areaLogin-input" name="Username" id="username" type="text"/>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <label for="password">Password</label>
-                                         </td>
+                                        </td>
                                         <td>
-                                        <input  class="areaLogin-input"  type="password" name="password"id="password"type="text"/>                                           
+                                            <input  class="areaLogin-input"  type="Password" name="Password" id="password" type="text"/>                                           
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input name="login" type="submit" formmethod="post" value ="Login"/> <br>   
+                                            <input name="Submit" type="submit"value ="Login"/>   
                                         </td>
                                     </tr>   
                                  </tbody>
                             </table>
+                  
                    </div>
             </div>  
             
@@ -67,7 +70,7 @@
         <!--FINE CORPO DELLA PAGINA -->
         
         <!-- FOOTER -->
-         <%@include file="include/footer.jsp" %> 
+          <jsp:include page="include/footer.jsp" /> 
         <!-- FINE FOOTER-->
 </body>
 </html>
