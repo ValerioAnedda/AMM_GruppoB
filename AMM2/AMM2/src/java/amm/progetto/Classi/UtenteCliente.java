@@ -15,6 +15,12 @@ public class UtenteCliente extends Utente {
         ContoUtente saldo ;
         ArrayList<OggettoVendita> carrello = new ArrayList<OggettoVendita>();
         
-        
-       
+    /**
+     *
+     * @return tipo di utente
+     */
+    @Override
+     public String getTipe(){
+        return "Cliente";
+    }  
 }

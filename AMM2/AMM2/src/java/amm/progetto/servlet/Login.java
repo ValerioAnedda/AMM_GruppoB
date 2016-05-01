@@ -7,7 +7,6 @@ package amm.progetto.servlet;
 
 import amm.progetto.Classi.Utente;
 import amm.progetto.Classi.UtenteVenditore;
-import amm.progetto.Classi.UtenteCliente;
 import amm.progetto.Classi.UtentiFactory;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,8 +50,7 @@ public class Login extends HttpServlet {
             
             for(Utente u : listaUtenti)
             {
-                if(u.getUsername().equals(username) && 
-                        u.getPassword().equals(password))
+                if(u.getUsername().equals(username) && u.getPassword().equals(password))
                 {
                     
                    session.setAttribute("loggedId", true);
@@ -60,21 +58,26 @@ public class Login extends HttpServlet {
                     
                     if(u instanceof UtenteVenditore)
                     {
-                        request.setAttribute("utenteVenditore", u);
-                        request.getRequestDispatcher("venditore.jsp")
+                        request.setAttribute("utente", u);
+                        request.setAttribute("oggetti", UtentiFactory.getInstance().getOggetti());
+                        request.getRequestDispatcher("./venditore.jsp")
                                 .forward(request, response);
                     }
                     else
                     {
-                        request.setAttribute("utenteCliente", u);
-                        request.getRequestDispatcher("cliente.jsp")
+                        request.setAttribute("utente", u);
+                        request.setAttribute("oggetti", UtentiFactory.getInstance().getOggetti());
+                        request.getRequestDispatcher("./cliente.jsp")
                                 .forward(request, response);
                     }
                 }
+                /* Parametro error per la gestione dell'errore della login*/
+                request.setAttribute("error", true);
             }
             
         }
-        request.getRequestDispatcher("login.jsp")
+        
+        request.getRequestDispatcher("./login.jsp")
                 .forward(request, response);
         
     }

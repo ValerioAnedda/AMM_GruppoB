@@ -14,7 +14,7 @@ body
     font-size: 16px;
     font-family: "Open Sans", Arial, sans-serif;
     color: blue;
-    background-image: url('https://www.msistone.com/image.axd?picture=SC@Perla-White-Quartz.jpg') ;
+    background-image: url('../img/background.jpeg') ;
     min-height: 680px;
     
 }

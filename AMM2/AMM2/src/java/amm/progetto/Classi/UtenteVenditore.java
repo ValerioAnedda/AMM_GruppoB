@@ -17,5 +17,12 @@ public class UtenteVenditore extends Utente {
     Integer saldo ;
     ArrayList<OggettoVendita> oggettiInvendita = new ArrayList<OggettoVendita>();
     
-    
+    /**
+     *
+     * @return tipo di utente
+     */
+    @Override
+    public String getTipe(){
+        return "Venditore";
+    }
 }

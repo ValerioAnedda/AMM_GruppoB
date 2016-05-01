@@ -10,7 +10,7 @@ package amm.progetto.Classi;
  * @author valerio
  */
 public class OggettoVendita {
-        /* Attributi */
+    /* Attributi */
     private Integer id;
     private String nome;
     private String urlImmagine;
@@ -57,7 +57,7 @@ public class OggettoVendita {
      * @return the urlImmagine
      */
     public String getUrlObject(){
-        return urlImmagine;
+        return this.urlImmagine;
     }
     
     /**

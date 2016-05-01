@@ -112,9 +112,9 @@ public class UtentiFactory {
        
        // Cliente 2 
        UtenteCliente cliente_2 = new UtenteCliente();
-       cliente_1.setId(2); 
-       cliente_1.setUsername("Cliente2"); cliente_1.setPassword("Cliente2");
-       cliente_1.setNome("Giovanni"); cliente_1.setCognome("Gialli");
+       cliente_2.setId(2); 
+       cliente_2.setUsername("Cliente2"); cliente_2.setPassword("Cliente2");
+       cliente_2.setNome("Giovanni"); cliente_2.setCognome("Gialli");
        listaClienti.add(cliente_2);
      
     }

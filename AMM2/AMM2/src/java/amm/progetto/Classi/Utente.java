@@ -106,4 +106,7 @@ public abstract class Utente {
         return saldo;
     }
     
+    public String getTipe(){    
+        return "err";
+    }
 }
