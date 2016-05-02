@@ -5,11 +5,8 @@
  */
 package amm.progetto.servlet;
 
-import amm.progetto.Classi.Utente;
-import amm.progetto.Classi.UtenteVenditore;
 import amm.progetto.Classi.UtentiFactory;
 import java.io.IOException;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +18,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author valerio
  */
-@WebServlet(name = "Venditore", urlPatterns = {"/Venditore"})
-public class Venditore extends HttpServlet {
+@WebServlet(name = "Cliente", urlPatterns = {"/Cliente"})
+public class Cliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,39 +34,21 @@ public class Venditore extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        ArrayList<UtenteVenditore> listaUtenti = UtentiFactory.getInstance().getVenditori();
         HttpSession session = request.getSession(false);
         
-            request.setAttribute("venditore", UtentiFactory.getInstance().getVenditore((int) session.getAttribute("id")));
-
-            Utente u = UtentiFactory.getInstance().getVenditore((int) session.getAttribute("id"));
-            request.setAttribute("auth", true);
-
-            String nomeOggetto = request.getParameter("NomeOggetto");
-            String urlImg = request.getParameter("UrlImg");
-            String descrizione = request.getParameter("DescrizioneOggetto");
-            String prezzo = request.getParameter("PrezzoOggetto");
-            String quantita = request.getParameter("QuantitaOggetto");
-            if (nomeOggetto.isEmpty() && urlImg.isEmpty() && descrizione.isEmpty() && prezzo.isEmpty() && quantita.isEmpty()) {
-                request.setAttribute("utente", u);
-                request.setAttribute("err", true);
-                request.getRequestDispatcher("./venditore.jsp")
-                        .forward(request, response);
-
-            }
-
-            request.setAttribute("nomeOggetto", nomeOggetto);
-            request.setAttribute("urlImg", urlImg);
-            request.setAttribute("descrizione", descrizione);
-            request.setAttribute("prezzo", prezzo);
-            request.setAttribute("quantita", quantita);
-
-            request.getRequestDispatcher("./cliente/passoAcquista.jsp")
-                    .forward(request, response);
+             request.setAttribute("cliente", UtentiFactory.getInstance()
+                .getCliente((int)session.getAttribute("id")));
+        
+        int idOggetto = Integer.parseInt(request.getParameter("idOggetto"));
+        request.setAttribute("oggetto", UtentiFactory.getInstance()
+                .getOggetto(idOggetto));
+        
+        request.getRequestDispatcher("./cliente/passoAcquista.jsp")
+                .forward(request, response);
         
     }
 
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

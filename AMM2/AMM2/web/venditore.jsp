@@ -33,17 +33,25 @@
             <jsp:include page="include/rightColumn.jsp" />
 
             <!--    Colonna Centrale -->
+            <c:if test="${loggedId}">
+                <c:if test="${tid == 'Venditore' }" > 
 
-            <c:if test="${utente.getTipe() == 'Venditore' }" > 
+                    <jsp:include page="venditore/form_venditore.jsp" />
 
-                <jsp:include page="venditore/form_venditore.jsp" />
+                </c:if>
 
+                <c:if test="${!(tid == 'Venditore')}" >
+                    <h2 align="center">non sei autorizzato devi avere le credenziali da Venditore</h2>  
+                </c:if> 
             </c:if>
 
-            <c:if test="${!(utente.getTipe() == 'Venditore' )}" >
-                non sei autorizzato ${authenticate}
-            </c:if> 
 
+
+            <c:if test="${!loggedId}">
+                <h2 align="center"> Prima di accedere alla tua area Venditore ricordatevi di fare il <a href="./login.jsp">LOGIN!!</a></h6>
+                    <h4 align="center"> per maggiori informazioni visitate la pagina di <a href="./descrizione.jsp"> Descrizione</a>. </h4>
+
+                </c:if>
 
         </div>  
 

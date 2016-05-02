@@ -55,6 +55,7 @@ public class Login extends HttpServlet {
                     
                    session.setAttribute("loggedId", true);
                     session.setAttribute("id", u.getId());
+                    session.setAttribute("tid", u.getTipe());
                     
                     if(u instanceof UtenteVenditore)
                     {
