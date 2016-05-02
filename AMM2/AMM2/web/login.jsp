@@ -33,6 +33,7 @@
             <!--    Colonna Centrale -->
             <div id="column-container"> 
                  
+                <c:if test="${!loggedId}">
                     <table class="areaLogin-table">
                         <td>Area login </td>
                         <form method="post" action="Login">
@@ -67,7 +68,14 @@
                         <p> campo password o username errati, riprovare </p> 
                     </c:if>
 
-                
+                </c:if>
+                <c:if test="${loggedId}">
+                    ciao ${tid}
+                    <form method="post" action="Logout"> 
+                    <input name="Submit" type="submit"value ="Logout"/> 
+                    </form>
+                     
+                </c:if>       
             </div>  
 
 

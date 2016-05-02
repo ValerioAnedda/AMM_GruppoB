@@ -15,7 +15,7 @@
     <div id="top-menu-container">
          <div class="top-menu">
             <div class="tab-top-menu"> 
-                <a href="./login.jsp" >Home </a>
+                <a href="./login.jsp" >Area personale Login/Logut </a>
                 <a href="./descrizione.jsp" >  Descrizione </a>
                 <a href="./venditore.jsp" >  Venditore </a> 
                 <a href="./cliente.jsp" >  Cliente </a> 
