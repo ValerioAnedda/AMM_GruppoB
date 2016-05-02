@@ -33,9 +33,33 @@
 
 
             <!--    Colonna Centrale -->
-          
-            
-            ${idOggetto} ${id} 
+            <div id ="column-container">
+                <table class="tabella-cliente">
+                    <!----- PRIMA RIGA COLONNA INTESTAZIONE --->
+                    <tr class="table-title">
+                        <th> Nome Prodotto</th>            
+                        <th> immagine</th>
+                        <th> Quantità</th>
+                        <th> prezzo</th>
+                    </tr> 
+                        <!--- 2 RIGA : ARIA FRESCA ---->
+
+
+
+                        <tr class="table-pari">
+
+                            <td class="table"><p> ${oggetto.nome}  </p></td>
+                            <td class="table"> <img title="${oggetto.nome}" src="${oggetto.getUrlObject()}"> </td>
+                            <td class="table"><p> ${oggetto.quantita} pz </p></td>
+                            <td class="table"><p> ${oggetto.quantita} euro </p></td>
+                            
+                        </tr>
+
+
+
+
+                </table>
+            </div>  
 
             <!-- Fine colonana centrale -->
 

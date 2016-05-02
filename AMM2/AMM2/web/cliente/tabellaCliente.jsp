@@ -30,6 +30,7 @@
                 <td class="table"><p> ${oggetto.quantita} pz </p></td>
                 <td class="table"><p> ${oggetto.quantita} euro </p></td>
                 <td class="table"> 
+                    <input type ="hidden" name ="idOggetto" id ="${oggetto.id}" / >
                      <a href="Cliente?idOggetto=${oggetto.id}"> <img title="carrello" alt="vai al carrello"  
                                          src="src/img clienti/carrello.gif"> </a> </td>
             </tr>

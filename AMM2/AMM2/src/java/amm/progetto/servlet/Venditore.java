@@ -64,7 +64,7 @@ public class Venditore extends HttpServlet {
             request.setAttribute("prezzo", prezzo);
             request.setAttribute("quantita", quantita);
 
-            request.getRequestDispatcher("./cliente/passoAcquista.jsp")
+            request.getRequestDispatcher("./venditore/oggettoCaricato.jsp")
                     .forward(request, response);
         
     }
