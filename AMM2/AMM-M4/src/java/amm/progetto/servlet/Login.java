@@ -10,6 +10,8 @@ import amm.progetto.Classi.UtenteVenditore;
 import amm.progetto.Classi.UtentiFactory;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +24,7 @@ import javax.servlet.http.HttpSession;
  * @author valerio
  */
 
-@WebServlet(name = "Login", urlPatterns = {"/Login"})
+@WebServlet(name = "Login", urlPatterns = {"/Login"} , loadOnStartup = 0)
 public class Login extends HttpServlet {
 
     /**
@@ -34,6 +36,12 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    private static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String DB_CLEAN_PATH = "../../web/WEB-INF/db/ammdb";
+    private static final String DB_BUILD_PATH = "WEB-INF/db/ammdb";
+
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -81,6 +89,26 @@ public class Login extends HttpServlet {
         request.getRequestDispatcher("./login.jsp")
                 .forward(request, response);
         
+    }
+    
+    @Override 
+
+    public void init(){
+
+        String dbConnection = "jdbc:derby:" + this.getServletContext().getRealPath("/") + DB_CLEAN_PATH;
+
+        try {
+
+            Class.forName(JDBC_DRIVER);
+
+        } catch (ClassNotFoundException ex) {
+
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+
+        UtentiFactory.getInstance().setConnectionString(dbConnection);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

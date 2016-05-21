@@ -32,7 +32,7 @@
 
             <!--    Colonna Centrale -->
             <div id="column-container"> 
-                 
+                 ${oggetti}
                 <c:if test="${!loggedId}">
                     <table class="areaLogin-table">
                         <td>Area login </td>
