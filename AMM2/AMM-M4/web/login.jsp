@@ -32,7 +32,6 @@
 
             <!--    Colonna Centrale -->
             <div id="column-container"> 
-                 ${oggetti}
                 <c:if test="${!loggedId}">
                     <table class="areaLogin-table">
                         <td>Area login </td>
@@ -70,7 +69,8 @@
 
                 </c:if>
                 <c:if test="${loggedId}">
-                    ciao ${tid}
+                    ciao ${tid}                  ${pathDb}
+
                     <form method="post" action="Logout"> 
                     <input name="Submit" type="submit"value ="Logout"/> 
                     </form>

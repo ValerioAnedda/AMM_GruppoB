@@ -1,6 +1,6 @@
 <%-- 
-    Document   : tabellaCliente
-    Created on : 25-apr-2016, 15.39.58
+    Document   : nuovoOggettoVenditore
+    Created on : 1-mag-2016, 20.48.42
     Author     : valerio
 --%>
 
@@ -17,7 +17,7 @@
     </tr> 
     
     <c:forEach var="oggetto" items="${oggetti}">
-        <form action="Cliente" method="GET">
+        <form action="TabellaVenditore" method="POST">
 
         <!--- 2 RIGA : ARIA FRESCA ---->
         
@@ -28,11 +28,10 @@
                 <td class="table"><p> ${oggetto.nome}  </p></td>
                 <td class="table"> <img title="${oggetto.nome}" src="${oggetto.getUrlObject()}"> </td>
                 <td class="table"><p> ${oggetto.quantita} pz </p></td>
-                <td class="table"><p> ${oggetto.quantita} euro </p></td>
-                <td class="table"> 
-                    <input type ="hidden" name ="idOggetto" id ="${oggetto.id}" />
-                     <a href="Cliente?idOggetto=${oggetto.id}"> <img title="carrello" alt="vai al carrello"  
-                                         src="src/img clienti/carrello.gif"> </a> </td>
+                <td class="table"><p> ${oggetto.quantita} euro  </p></td>
+            <input type ="hidden" name ="idOggetto" value="${oggetto.getId()}" />
+                <td class="table">  <input name="elimina" type="submit"  value ="Elimina" />
+                    </td>
             </tr>
         </form>
 
@@ -40,5 +39,3 @@
            
 
 </table>
-
-

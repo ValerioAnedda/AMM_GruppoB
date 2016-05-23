@@ -26,7 +26,7 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "Login", urlPatterns = {"/Login"} , loadOnStartup = 0)
 public class Login extends HttpServlet {
-    
+
     
     private static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
     private static final String DB_CLEAN_PATH = "../../web/WEB-INF/db/ammdb";
@@ -35,8 +35,8 @@ public class Login extends HttpServlet {
      @Override 
     public void init(){
 
-        String dbConnection = "jdbc:derby:" + this.getServletContext().getRealPath("/") + DB_BUILD_PATH;
-
+      //  String dbConnection = "jdbc:derby:" + this.getServletContext().getRealPath("/") + DB_BUILD_PATH;
+        String dbConnection = "jdbc:derby://localhost:1527/ammdb";        
         try {
 
             Class.forName(JDBC_DRIVER);
@@ -88,7 +88,7 @@ public class Login extends HttpServlet {
                     if(u instanceof UtenteVenditore)
                     {
                         request.setAttribute("utente", u);
-                        request.setAttribute("oggetti", UtentiFactory.getInstance().getOggetti());
+                        request.setAttribute("oggetti", UtentiFactory.getInstance().getOggetti(u.getId()));
                         request.getRequestDispatcher("./venditore.jsp")
                                 .forward(request, response);
                     }

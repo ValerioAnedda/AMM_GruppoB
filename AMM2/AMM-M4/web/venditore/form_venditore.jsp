@@ -8,7 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="column-container"> 
 
-    <h2 aling="center"> Benevenuto nell'area del Venditore ${utente.nome}</h2>
+    <h2 aling="center"> Benevenuto nell'area del Venditore ${utente.getNome()} </h2>
     <p> Qui potrai vendere tante belle cose inutili per tutti ma utili peri tuoi guadagni <br>
         hai un vecchio tavolo? Hai un veccio tappeto, hai una lamapda a olio che non ti <br>
         serve più? qui puoi metterla in vendita e ricavare i soldi per poter comprare altre<br>

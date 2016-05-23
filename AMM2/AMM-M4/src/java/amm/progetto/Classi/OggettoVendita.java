@@ -14,6 +14,7 @@ public class OggettoVendita {
     private Integer id;
     private String nome;
     private String urlImmagine;
+    private String descrizione;
     private Integer quantita;
     private Double prezzo;
     private UtenteVenditore venditore; 
@@ -69,6 +70,21 @@ public class OggettoVendita {
     }
      
      /**
+     * @return the descrizione
+     */
+    public String getDescrizione(){
+        return this.descrizione;
+    }
+    
+    /**
+     * @param descrizione the descrizione to set
+     * 
+     */
+     public void setDescrizione(String descrizione){
+        this.descrizione = descrizione;
+    }
+     
+     /**
      * @return the quantita
      */
      public Integer getQuantita(){
@@ -83,6 +99,9 @@ public class OggettoVendita {
          this.quantita = quantita;
      }
      
+     public void setQuantita(String quantita) {
+        this.quantita = Integer.parseInt(quantita);
+    }
      
     /**
      * @return the prezzo
@@ -102,7 +121,11 @@ public class OggettoVendita {
          this.prezzo= prezzo +0.0;
      }
      
-     
+     public void setPrezzo(String prezzo) {
+        this.prezzo = Double.parseDouble(prezzo);
+    }
+      
+      
      /**
      * @return the venditore
      */
@@ -132,6 +155,10 @@ public class OggettoVendita {
      public void setCategoria( String categoria ){
          this.categoria = categoria;
      } 
+
+    
+
+    
      
      
      

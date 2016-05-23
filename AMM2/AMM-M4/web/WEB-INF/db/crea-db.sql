@@ -64,9 +64,8 @@ CREATE TABLE OggettoInVendita(
     prezzo REAL,
     descrizione VARCHAR(32000),
     idVenditore INTEGER,
-    idCategoria INTEGER,
-    FOREIGN KEY (idVenditore) REFERENCES Utente(id),
-    FOREIGN KEY (idCategoria) REFERENCES CategoriaOggetti(id)
+    idCategoria INTEGER
+    
 )
 ;
 

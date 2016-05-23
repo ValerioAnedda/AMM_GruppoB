@@ -38,14 +38,16 @@
 
                     <jsp:include page="venditore/form_venditore.jsp" />
 
-                </c:if>
+                    <jsp:include page="venditore/tabella_venditore.jsp" />
 
+                    
+                </c:if>
                 <c:if test="${!(tid == 'Venditore')}" >
                     <h2 align="center">non sei autorizzato devi avere le credenziali da Venditore</h2>  
                 </c:if> 
             </c:if>
 
-
+            
 
             <c:if test="${!loggedId}">
                 <h2 align="center"> Prima di accedere alla tua area Venditore ricordatevi di fare il <a href="./login.jsp">LOGIN!!</a></h6>

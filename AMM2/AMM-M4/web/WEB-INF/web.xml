@@ -38,4 +38,13 @@
         <url-pattern>/Cliente</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>TabellaVenditore</servlet-name>
+        <servlet-class>amm.progetto.servlet.TabellaVenditore</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TabellaVenditore</servlet-name>
+        <url-pattern>/TabellaVenditore</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
